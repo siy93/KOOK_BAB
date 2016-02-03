@@ -5,7 +5,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -15,6 +14,7 @@ public class MainActivity extends AppCompatActivity {
 
     Intent splash;
     Intent InSchool_intent;
+    Intent OutSchool_intent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,11 +22,13 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         //Button 설정
-        bt_InUniv = (Button)findViewById(R.id.button1);
+        bt_InUniv = (Button)findViewById(R.id.bt_ins);
+        bt_OutUniv = (Button)findViewById(R.id.bt_outs);
 
         //intent 설정
         splash = new Intent(this, SplashActivity.class);
         InSchool_intent = new Intent(this,InSchoolActivity.class);
+        OutSchool_intent = new Intent(this,OutSchoolActivity.class);
 
 
         startActivity(splash); //Splash 화면 띄우기
@@ -36,6 +38,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(InSchool_intent);
+            }
+        });
+
+        bt_OutUniv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(OutSchool_intent);
             }
         });
 

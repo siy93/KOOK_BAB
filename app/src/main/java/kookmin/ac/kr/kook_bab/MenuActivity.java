@@ -1,16 +1,11 @@
 package kookmin.ac.kr.kook_bab;
 
 
-import android.support.v7.app.AppCompatActivity;
+import com.nhn.android.maps.NMapActivity;
 import android.os.Bundle;
-import android.widget.TextView;
-
-import net.htmlparser.jericho.Source;
-
-import java.net.URL;
 
 
-public class MenuActivity extends AppCompatActivity {
+public class MenuActivity extends NMapActivity{
 
 
 

@@ -10,30 +10,30 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="교내"
-        android:id="@+id/button1"
+        android:id="@+id/bt_ins"
         android:layout_marginTop="46dp"
         android:layout_alignParentTop="true"
-        android:layout_alignLeft="@+id/button2"
-        android:layout_alignStart="@+id/button2" />
+        android:layout_alignLeft="@+id/bt_outs"
+        android:layout_alignStart="@+id/bt_outs" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="교외"
-        android:id="@+id/button2"
+        android:id="@+id/bt_outs"
         android:layout_marginTop="58dp"
-        android:layout_below="@+id/button1"
+        android:layout_below="@+id/bt_ins"
         android:layout_centerHorizontal="true" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="배달"
-        android:id="@+id/button3"
+        android:id="@+id/bt_delibery"
         android:layout_marginTop="71dp"
-        android:layout_below="@+id/button2"
-        android:layout_alignLeft="@+id/button2"
-        android:layout_alignStart="@+id/button2" />
+        android:layout_below="@+id/bt_outs"
+        android:layout_alignLeft="@+id/bt_outs"
+        android:layout_alignStart="@+id/bt_outs" />
 
     <Button
         android:layout_width="wrap_content"
@@ -41,7 +41,7 @@
         android:text="기타"
         android:id="@+id/button4"
         android:layout_marginTop="82dp"
-        android:layout_below="@+id/button3"
-        android:layout_alignLeft="@+id/button3"
-        android:layout_alignStart="@+id/button3" />
+        android:layout_below="@+id/bt_delibery"
+        android:layout_alignLeft="@+id/bt_delibery"
+        android:layout_alignStart="@+id/bt_delibery" />
 </RelativeLayout>
