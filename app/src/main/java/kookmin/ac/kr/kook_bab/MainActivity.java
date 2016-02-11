@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
         //intent 설정
         splash = new Intent(this, SplashActivity.class);
         InSchool_intent = new Intent(this,InSchoolActivity.class);
-        OutSchool_intent = new Intent(this,NMapViewr.class);
+        OutSchool_intent = new Intent(this,GoogleMapActivity.class);
 
 
         startActivity(splash); //Splash 화면 띄우기
