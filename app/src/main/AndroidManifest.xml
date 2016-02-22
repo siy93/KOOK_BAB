@@ -37,11 +37,6 @@
             android:theme="@style/AppTheme.NoActionBar" >
         </activity>
         <activity
-            android:name=".InSchoolActivity"
-            android:label="@string/title_activity_splash"
-            android:theme="@style/AppTheme.NoActionBar" >
-        </activity>
-        <activity
             android:name=".MenuActivity"
             android:label="@string/title_activity_splash"
             android:theme="@style/AppTheme.NoActionBar" >
@@ -51,10 +46,12 @@
             android:label="@string/title_activity_splash"
             android:theme="@style/AppTheme.NoActionBar" >
         </activity>
+        <activity
+            android:name=".Data"
+            android:theme="@style/AppTheme.NoActionBar" >
+        </activity>
 
-        <meta-data
-            android:name="com.google.android.maps.v2.API_KEY"
-            android:value="AIzaSyBvugLxbGtk8jgp2YnmkgW1V7X44qa1weA" />
+
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyBvugLxbGtk8jgp2YnmkgW1V7X44qa1weA"/>
