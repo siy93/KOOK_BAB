@@ -46,6 +46,9 @@ public class MainActivity extends FragmentActivity {
             }else if(position == 2){
                 DeliverySchoolFragment delivery = new DeliverySchoolFragment();
                 return delivery;
+            }else if(position == 3){
+                OtherInfoFragment other = new OtherInfoFragment();
+                return other;
             }
             else {
                 return TestFragment.newInstance(CONTENT[position % CONTENT.length]);
