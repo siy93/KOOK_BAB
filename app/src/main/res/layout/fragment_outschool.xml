@@ -5,82 +5,96 @@
 
     <LinearLayout
         android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:layout_height="fill_parent"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true">
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true">
 
         <LinearLayout
             android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_width="300dp"
+            android:layout_height="150dp">
 
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:text="New Button"
-                android:id="@+id/button2" />
+                android:layout_weight="1"
+                android:background="@drawable/cafe"
+                android:id="@+id/bt_caffe" />
 
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:text="New Button"
-                android:id="@+id/button" />
+                android:layout_weight="1"
+                android:background="@drawable/china"
+                android:id="@+id/bt_china" />
 
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:text="New Button"
-                android:id="@+id/button3" />
+                android:layout_weight="1"
+                android:background="@drawable/korea"
+                android:id="@+id/bt_korea" />
+
         </LinearLayout>
 
         <LinearLayout
             android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_width="300dp"
+            android:text="1"
+            android:layout_height="150dp">
 
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:text="New Button"
-                android:id="@+id/button4" />
+                android:layout_weight="1"
+                android:background="@drawable/usa"
+                android:id="@+id/bt_usa" />
 
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:text="New Button"
-                android:id="@+id/button5" />
+                android:layout_weight="1"
+                android:background="@drawable/japan"
+                android:id="@+id/bt_japan" />
 
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:text="New Button"
-                android:id="@+id/button6" />
+                android:layout_weight="1"
+                android:background="@drawable/sub"
+                android:id="@+id/bt_sub" />
+
         </LinearLayout>
 
         <LinearLayout
             android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:weightSum="1">
+            android:layout_width="300dp"
+            android:layout_height="150dp"
+            android:layout_weight="1">
 
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:text="New Button"
-                android:id="@+id/button7" />
+                android:layout_weight="1"
+                android:background="@drawable/drink"
+                android:id="@+id/bt_drink" />
 
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:text="New Button"
-                android:id="@+id/button8" />
+                android:layout_weight="1"
+                android:background="@drawable/meat"
+                android:id="@+id/bt_meat" />
+
 
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:text="New Button"
-                android:id="@+id/button9" />
+                android:layout_weight="1"
+                android:background="@drawable/chicken"
+                android:id="@+id/bt_chicken" />
+
         </LinearLayout>
     </LinearLayout>
 

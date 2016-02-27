@@ -27,6 +27,7 @@ public class GoogleMapActivity extends AppCompatActivity {
 
     GoogleApiClient googleApiClient;
 
+    String whattype;
     String lon,lat;
     double mlon,mlat;
 
@@ -51,7 +52,8 @@ public class GoogleMapActivity extends AppCompatActivity {
 
         //현재 위치로 가는 버튼 표시
         map.moveCamera(CameraUpdateFactory.newLatLngZoom(SEOUL, 16));
-        selectDataAll("한식");
+        whattype = getIntent().getExtras().getString("type");
+        selectDataAll(whattype);
 
     }
 

@@ -12,12 +12,6 @@ import com.viewpagerindicator.TabPageIndicator;
 
 public class MainActivity extends FragmentActivity {
     private static final String[] CONTENT = new String[] { "교내", "교외", "배달", "기타" };
-    private static final int[] ICONS = new int[] {
-            R.drawable.perm_group_calendar,
-            R.drawable.perm_group_camera,
-            R.drawable.perm_group_device_alarms,
-            R.drawable.perm_group_location,
-    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,7 +27,7 @@ public class MainActivity extends FragmentActivity {
         indicator.setViewPager(pager);
     }
 
-    class GoogleMusicAdapter extends FragmentPagerAdapter implements IconPagerAdapter {
+    class GoogleMusicAdapter extends FragmentPagerAdapter {
         public GoogleMusicAdapter(FragmentManager fm) {
             super(fm);
         }
@@ -41,15 +35,15 @@ public class MainActivity extends FragmentActivity {
         @Override
         public Fragment getItem(int position) {
             if(position == 1) {
-                OutSchoolFragment out = new OutSchoolFragment();
-                return out;
-            }else if(position == 2){
-                DeliverySchoolFragment delivery = new DeliverySchoolFragment();
-                return delivery;
-            }else if(position == 3){
                 OtherInfoFragment other = new OtherInfoFragment();
                 return other;
+
             }
+            else if(position == 2) {
+                OutSchoolFragment out = new OutSchoolFragment();
+                return out;
+            }
+
             else {
                 return TestFragment.newInstance(CONTENT[position % CONTENT.length]);
             }
@@ -60,9 +54,6 @@ public class MainActivity extends FragmentActivity {
             return CONTENT[position % CONTENT.length].toUpperCase();
         }
 
-        @Override public int getIconResId(int index) {
-            return ICONS[index];
-        }
 
         @Override
         public int getCount() {

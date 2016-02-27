@@ -5,82 +5,94 @@
 
     <LinearLayout
         android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:layout_height="fill_parent"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true">
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true">
 
         <LinearLayout
             android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_width="300dp"
+            android:layout_height="150dp"
+            android:layout_weight="1">
 
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:text="도서관 잔여석 조회"
+                android:layout_weight="1"
+                android:background="@drawable/library"
                 android:id="@+id/bt_library" />
 
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:text="통학버스 시간조회"
-                android:id="@+id/bt_bus" />
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:text="전화번호"
+                android:layout_weight="1"
+                android:background="@drawable/tel"
                 android:id="@+id/bt_tel" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/school_bus"
+                android:id="@+id/bt_bus" />
         </LinearLayout>
 
         <LinearLayout
             android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_width="300dp"
+            android:layout_weight="1"
+            android:layout_height="150dp">
 
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:text="기타시설 이용시간 조회"
-                android:id="@+id/bt_conv" />
+                android:layout_weight="1"
+                android:background="@drawable/other"
+                android:id="@+id/bt_other" />
 
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:text="ATM 위치확인"
-                android:id="@+id/bt_atm" />
+                android:layout_weight="1"
+                android:background="@drawable/scholarship"
+                android:id="@+id/bt_sub_info" />
 
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:text="건의"
-                android:id="@+id/bt_submit" />
+                android:layout_weight="1"
+                android:background="@drawable/internet_school"
+                android:id="@+id/bt_internet" />
         </LinearLayout>
 
         <LinearLayout
             android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:weightSum="1">
+            android:layout_width="300dp"
+            android:layout_height="150dp"
+            android:layout_weight="1"
+            >
 
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:text="장학공지"
-                android:id="@+id/bt_subinfo" />
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:text="가상대학"
-                android:id="@+id/bt_cyber" />
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:text="종합정보시스템"
+                android:layout_weight="1"
+                android:background="@drawable/sys"
                 android:id="@+id/bt_sys" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/atm"
+                android:id="@+id/atm" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/submit"
+                android:id="@+id/bt_submit" />
         </LinearLayout>
     </LinearLayout>
 

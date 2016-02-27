@@ -24,7 +24,7 @@ public class OtherInfoFragment extends Fragment {
         bt_library.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent myIntent = new  Intent(Intent.ACTION_VIEW, Uri.parse("210.123.38.73/index.asp"));
+                Intent myIntent = new  Intent(Intent.ACTION_VIEW, Uri.parse("http://210.123.38.73/index.asp"));
                 startActivity(myIntent);
             }
         });
@@ -44,7 +44,7 @@ public class OtherInfoFragment extends Fragment {
                 startActivity(myIntent);
             }
         });
-        Button bt_conv = (Button)rootView.findViewById(R.id.bt_conv);
+        Button bt_conv = (Button)rootView.findViewById(R.id.bt_other);
         bt_conv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -52,7 +52,7 @@ public class OtherInfoFragment extends Fragment {
                 startActivity(myIntent);
             }
         });
-        Button bt_subinfo = (Button)rootView.findViewById(R.id.bt_subinfo);
+        Button bt_subinfo = (Button)rootView.findViewById(R.id.bt_sub_info);
         bt_subinfo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -60,7 +60,7 @@ public class OtherInfoFragment extends Fragment {
                 startActivity(myIntent);
             }
         });
-        Button bt_cyber = (Button)rootView.findViewById(R.id.bt_cyber);
+        Button bt_cyber = (Button)rootView.findViewById(R.id.bt_internet);
         bt_cyber.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -76,6 +76,7 @@ public class OtherInfoFragment extends Fragment {
                 startActivity(myIntent);
             }
         });
+
 
         return rootView;
     }
