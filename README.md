@@ -1,9 +1,9 @@
 # KOOK_BAB
 KOOK_BAB is a service that offer restaurant information not only inside of Universty but also outside of university. 
 
-Also this application offer other information such as library seat remains, many part of university phone number information, school_bus time info, other conveniance facility time info, scholarship info, and position of ATM.
+Also this application offer other information such as library seat remains, many part of university phone number, school_bus time, other conveniance facility time, scholarship , and position of ATM Informations.
 
-This application offer User's position with Using Google Map API and can record any data that user want.
+This application offer restaurant position with Using Google Map API and can record any data that user want.
 
 This project contains client libraries and samples to help developers interface with and explore the Google Map APIs.
 
