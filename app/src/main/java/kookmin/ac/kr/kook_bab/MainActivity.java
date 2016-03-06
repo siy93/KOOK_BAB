@@ -11,14 +11,20 @@ import com.viewpagerindicator.IconPagerAdapter;
 import com.viewpagerindicator.TabPageIndicator;
 
 public class MainActivity extends FragmentActivity {
-    private static final String[] CONTENT = new String[] { "교내", "교외", "배달", "기타" };
+    private static final String[] CONTENT = new String[] { "교내", "교외", "검색", "기타" };
+    private static final int[] ICONS = new int[] {
+            R.drawable.kmu,
+            R.drawable.fork,
+            R.drawable.places_ic_search,
+            R.drawable.perm_group_device_alarms,
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        FragmentPagerAdapter adapter = new GoogleMusicAdapter(getSupportFragmentManager());
+        FragmentPagerAdapter adapter = new MyAdapter(getSupportFragmentManager());
 
         ViewPager pager = (ViewPager)findViewById(R.id.pager);
         pager.setAdapter(adapter);
@@ -27,31 +33,38 @@ public class MainActivity extends FragmentActivity {
         indicator.setViewPager(pager);
     }
 
-    class GoogleMusicAdapter extends FragmentPagerAdapter {
-        public GoogleMusicAdapter(FragmentManager fm) {
+    class MyAdapter extends FragmentPagerAdapter implements IconPagerAdapter{
+        public MyAdapter(FragmentManager fm) {
             super(fm);
         }
 
         @Override
         public Fragment getItem(int position) {
             if(position == 1) {
-                OtherInfoFragment other = new OtherInfoFragment();
-                return other;
-
-            }
-            else if(position == 2) {
                 OutSchoolFragment out = new OutSchoolFragment();
                 return out;
             }
-
+            else if(position == 2){
+                DeliverySchoolFragment del = new DeliverySchoolFragment();
+                return del;
+            }
+            else if(position == 3) {
+                OtherInfoFragment other = new OtherInfoFragment();
+                return other;
+            }
             else {
-                return TestFragment.newInstance(CONTENT[position % CONTENT.length]);
+                InSchoolFragment in = new InSchoolFragment();
+                return in;
             }
         }
 
         @Override
         public CharSequence getPageTitle(int position) {
             return CONTENT[position % CONTENT.length].toUpperCase();
+        }
+
+        @Override public int getIconResId(int index) {
+            return ICONS[index];
         }
 
 

@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.Toast;
 
 /**
  * Created by 송인엽 on 2016-02-23.
@@ -76,8 +77,22 @@ public class OtherInfoFragment extends Fragment {
                 startActivity(myIntent);
             }
         });
-
-
+        Button bt_atm = (Button)rootView.findViewById(R.id.atm);
+        bt_atm.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                Intent map = new Intent(getActivity(),GoogleMapActivity.class);
+                map.putExtra("type","atm");
+                startActivity(map);
+            }
+        });
+        Button bt_submit = (Button)rootView.findViewById(R.id.bt_submit);
+        bt_submit.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                Toast.makeText(getActivity(),"준비중입니다",Toast.LENGTH_SHORT);
+            }
+        });
         return rootView;
     }
 }

@@ -20,21 +20,21 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="@drawable/library"
+                android:text="도서관 좌석 조회"
                 android:id="@+id/bt_library" />
 
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="@drawable/tel"
+                android:text="교내 전화번호 조회"
                 android:id="@+id/bt_tel" />
 
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="@drawable/school_bus"
+                android:text="통학버스 시간 조회"
                 android:id="@+id/bt_bus" />
         </LinearLayout>
 
@@ -48,21 +48,21 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="@drawable/other"
+                android:text="기타시설 이용시간 조회"
                 android:id="@+id/bt_other" />
 
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="@drawable/scholarship"
+                android:text="장학정보"
                 android:id="@+id/bt_sub_info" />
 
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="@drawable/internet_school"
+                android:text="가상대학"
                 android:id="@+id/bt_internet" />
         </LinearLayout>
 
@@ -77,21 +77,21 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="@drawable/sys"
+                android:text="종합정보시스템"
                 android:id="@+id/bt_sys" />
 
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="@drawable/atm"
+                android:text="atm 위치 조회"
                 android:id="@+id/atm" />
 
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="@drawable/submit"
+                android:text="기타 건의"
                 android:id="@+id/bt_submit" />
         </LinearLayout>
     </LinearLayout>

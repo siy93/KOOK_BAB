@@ -19,21 +19,21 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="@drawable/cafe"
+                android:text="카페"
                 android:id="@+id/bt_caffe" />
 
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="@drawable/china"
+                android:text="중국집"
                 android:id="@+id/bt_china" />
 
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="@drawable/korea"
+                android:text="한식"
                 android:id="@+id/bt_korea" />
 
         </LinearLayout>
@@ -48,21 +48,21 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="@drawable/usa"
+                android:text="양식"
                 android:id="@+id/bt_usa" />
 
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="@drawable/japan"
+                android:text="일식"
                 android:id="@+id/bt_japan" />
 
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="@drawable/sub"
+                android:text="분식"
                 android:id="@+id/bt_sub" />
 
         </LinearLayout>
@@ -77,14 +77,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="@drawable/drink"
+                android:text="술"
                 android:id="@+id/bt_drink" />
 
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="@drawable/meat"
+                android:text="고기"
                 android:id="@+id/bt_meat" />
 
 
@@ -92,7 +92,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="@drawable/chicken"
+                android:text="치킨"
                 android:id="@+id/bt_chicken" />
 
         </LinearLayout>

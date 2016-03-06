@@ -17,7 +17,6 @@ import android.widget.TextView;
 import com.google.android.gms.maps.GoogleMap;
 
 public final class TestFragment extends Fragment {
-    private GoogleMap map;
     private static final String KEY_CONTENT = "TestFragment:Content";
 
     public static TestFragment newInstance(String content) {

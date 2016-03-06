@@ -66,7 +66,7 @@ public class OutSchoolFragment extends Fragment {
             public void onClick(View v) {
                 Intent map = new Intent(getActivity(),GoogleMapActivity.class);
                 map.putExtra("type","치킨");
-               startActivity(map);
+                startActivity(map);
             }
         });
         bt_japan.setOnClickListener(new View.OnClickListener() {
