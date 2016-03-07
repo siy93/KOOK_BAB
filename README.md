@@ -21,6 +21,9 @@ Unless required by applicable law or agreed to in writing, software distributed 
 
 - ViewPageIndicator by JAKE WHARTON
 
+
+https://github.com/JakeWharton/ViewPagerIndicator
+
 #comment 
 
 This application is very deficient. this app need to be fixed many point. so i'll revise continuosly.
