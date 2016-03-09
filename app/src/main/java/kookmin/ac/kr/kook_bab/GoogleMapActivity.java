@@ -4,7 +4,6 @@ package kookmin.ac.kr.kook_bab;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
-import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -29,6 +28,7 @@ public class GoogleMapActivity extends AppCompatActivity {
     GoogleApiClient googleApiClient;
 
     String whattype;
+    String getPosition;
     String lon,lat;
     double mlon,mlat;
 
@@ -121,12 +121,43 @@ public class GoogleMapActivity extends AppCompatActivity {
         insertData("국민은행 성곡도서관", 37.610198, 126.997755, "atm", "");
         insertData("우체국 복지관", 37.610424, 126.995916, "atm", "");
         insertData("신한은행 북악관", 37.612164, 126.996936, "atm", "");
-        insertData("공용",37.610478, 126.994171, "atm", "");
+        insertData("공용", 37.610478, 126.994171, "atm", "");
 
         //현재 위치로 가는 버튼 표시
         map.moveCamera(CameraUpdateFactory.newLatLngZoom(SEOUL, 16));
         whattype = getIntent().getExtras().getString("type");
         selectDataAll(whattype);
+
+        getPosition = getIntent().getExtras().getString("p_id");
+        selectData(getPosition);
+
+    }
+
+    public void selectData(String what) {
+        String sql = "select * from " + tableName + ";";
+        Cursor result = db.rawQuery(sql, null);
+        result.moveToFirst();
+
+        while (!result.isAfterLast()) {
+            String act = result.getString(0);
+            String name = result.getString(1);
+            if(act.equals(what)) {
+                lon = result.getString(2);
+                lat = result.getString(3);
+                Log.d("lab_sqlite", "index= " + lon + " name=" + lat);
+
+                mlon = Double.valueOf(lon);
+                mlat = Double.valueOf(lat);
+                Log.d("lab_sqlite", "d= " + mlon + " ae=" + mlat);
+
+                final LatLng ThisLocation = new LatLng(mlon, mlat);
+                map.moveCamera(CameraUpdateFactory.newLatLngZoom(ThisLocation, 16));
+                Marker my = map.addMarker(new MarkerOptions().position(ThisLocation).title(name).icon(BitmapDescriptorFactory.fromResource(R.drawable.fork)));
+                }
+            result.moveToNext();
+            }
+        result.close();
+
 
     }
 

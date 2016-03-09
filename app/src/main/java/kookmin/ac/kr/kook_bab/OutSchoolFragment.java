@@ -7,11 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.Toast;
 
-/**
- * Created by 송인엽 on 2016-02-20.
- */
 public class OutSchoolFragment extends Fragment {
 
     public OutSchoolFragment() {}

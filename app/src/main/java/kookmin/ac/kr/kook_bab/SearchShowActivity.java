@@ -8,10 +8,11 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
+
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -62,7 +63,7 @@ public class SearchShowActivity extends AppCompatActivity implements AdapterView
 
     // 모든 Data 읽기
     public void select(String what) {
-        String sql = "select * from " + tableName + ";";
+        String sql = "select * from " + tableName + " where type = '" + what + "' ;";
         Cursor results = db.rawQuery(sql, null);
         results.moveToFirst();
         if(results.getCount() == 0) {
@@ -79,14 +80,13 @@ public class SearchShowActivity extends AppCompatActivity implements AdapterView
             String type = results.getString(4);
             //Log.d("lab_sqlite", "index= " + id + " name=" + name);
 
-            if(type == "치킨") {
-                arr_id_list.add(id);
-                arrList.add(name);
-                arr_lon_list.add(lon);
-                arr_lat_list.add(lat);
-                arr_type_list.add(type);
-                results.moveToNext();
-            }
+            arr_id_list.add(id);
+            arrList.add(name);
+            arr_lon_list.add(lon);
+            arr_lat_list.add(lat);
+            arr_type_list.add(type);
+            results.moveToNext();
+
         }
         results.close();
     }
@@ -118,6 +118,7 @@ public class SearchShowActivity extends AppCompatActivity implements AdapterView
             public void onClick( DialogInterface dialog, int which ) {
                 String position = arr_id_list.get(selectedPos);
                 dialog.dismiss();
+
 
                 Intent intent = new Intent(SearchShowActivity.this, GoogleMapActivity.class);
                 intent.putExtra("p_id", position);
