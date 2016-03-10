@@ -63,7 +63,7 @@ public class SearchShowActivity extends AppCompatActivity implements AdapterView
 
     // 모든 Data 읽기
     public void select(String what) {
-        String sql = "select * from " + tableName + " where type = '" + what + "' ;";
+        String sql = "select * from " + tableName + " where (type = '" + what + "' OR name like '%" + what + "%' );";
         Cursor results = db.rawQuery(sql, null);
         results.moveToFirst();
         if(results.getCount() == 0) {

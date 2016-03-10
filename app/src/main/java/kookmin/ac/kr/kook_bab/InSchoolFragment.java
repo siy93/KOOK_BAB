@@ -10,9 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.webkit.WebView;
 
-/**
- * Created by 송인엽 on 2016-03-06.
- */
+
 public class InSchoolFragment extends Fragment {
 
 
