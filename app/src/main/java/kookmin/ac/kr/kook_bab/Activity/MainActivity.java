@@ -1,4 +1,4 @@
-package kookmin.ac.kr.kook_bab;
+package kookmin.ac.kr.kook_bab.Activity;
 
 
 import android.os.Bundle;
@@ -9,6 +9,14 @@ import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import com.viewpagerindicator.IconPagerAdapter;
 import com.viewpagerindicator.TabPageIndicator;
+
+import kookmin.ac.kr.kook_bab.Fragment.DeliverySchoolFragment;
+import kookmin.ac.kr.kook_bab.Fragment.InSchoolFragment;
+import kookmin.ac.kr.kook_bab.Fragment.OtherInfoFragment;
+import kookmin.ac.kr.kook_bab.Fragment.OutSchoolFragment;
+import kookmin.ac.kr.kook_bab.R;
+
+
 
 public class MainActivity extends FragmentActivity {
     private static final String[] CONTENT = new String[] { "교내", "교외", "검색", "기타" };
@@ -24,6 +32,7 @@ public class MainActivity extends FragmentActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        //Viewpageindicator Setting
         FragmentPagerAdapter adapter = new MyAdapter(getSupportFragmentManager());
 
         ViewPager pager = (ViewPager)findViewById(R.id.pager);
@@ -38,6 +47,7 @@ public class MainActivity extends FragmentActivity {
             super(fm);
         }
 
+        //Fragment Setting
         @Override
         public Fragment getItem(int position) {
             if(position == 1) {

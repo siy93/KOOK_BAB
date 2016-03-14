@@ -1,4 +1,4 @@
-package kookmin.ac.kr.kook_bab;
+package kookmin.ac.kr.kook_bab.Activity;
 
 import android.app.AlertDialog;
 import android.content.Context;
@@ -8,7 +8,6 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -17,17 +16,21 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
+
+import kookmin.ac.kr.kook_bab.R;
+
 /**
  * Created by 송인엽 on 2016-03-04.
  */
 public class SearchShowActivity extends AppCompatActivity implements AdapterView.OnItemLongClickListener
 {
-    //Object about Database
+    ////Database Setting
     SQLiteDatabase db;
     String dbName = "log.db";
     String tableName = "logListTable";
     int dbMode = Context.MODE_PRIVATE;
 
+    //Adapter and ArrayList
     ArrayAdapter<String> baseAdapter;
     ArrayList<String> arrList = null;
     ArrayList<String> arr_id_list = null;
@@ -41,9 +44,10 @@ public class SearchShowActivity extends AppCompatActivity implements AdapterView
 
         setContentView(R.layout.activity_searchshow);
 
-        //  Database 생성 및 열기
+        //  Database open
         db = openOrCreateDatabase(dbName,dbMode,null);
 
+        // Adapter setting
         arrList = new ArrayList<String>();
         arr_id_list = new ArrayList<String>();
         arr_lon_list= new ArrayList<String>();
@@ -52,9 +56,9 @@ public class SearchShowActivity extends AppCompatActivity implements AdapterView
         baseAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_dropdown_item_1line, arrList);
         ListView mList = (ListView) findViewById(R.id.list_view);
         mList.setAdapter(baseAdapter);
-
         mList.setOnItemLongClickListener(this);
 
+        //intent Setting
         Intent intent = getIntent();
         String what = intent.getExtras().getString("info");
         select(what);

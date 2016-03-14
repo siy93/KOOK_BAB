@@ -23,7 +23,7 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme" >
-        <activity android:name=".MainActivity" >
+        <activity android:name=".Activity.MainActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -37,12 +37,12 @@
             android:theme="@style/AppTheme.NoActionBar" >
         </activity>
         <activity
-            android:name=".GoogleMapActivity"
+            android:name=".Activity.GoogleMapActivity"
             android:label="@string/title_activity_splash"
             android:theme="@style/AppTheme.NoActionBar" >
         </activity>
         <activity
-            android:name=".SearchShowActivity"
+            android:name=".Activity.SearchShowActivity"
             android:theme="@style/AppTheme.NoActionBar" >
         </activity>
 

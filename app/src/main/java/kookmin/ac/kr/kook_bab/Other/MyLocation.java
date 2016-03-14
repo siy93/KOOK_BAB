@@ -1,4 +1,4 @@
-package kookmin.ac.kr.kook_bab;
+package kookmin.ac.kr.kook_bab.Other;
 
 /**
  * Created by 송인엽 on 2015-12-18.

@@ -19,5 +19,4 @@ android {
 
 dependencies {
     compile 'com.android.support:support-v4:18.+'
-    compile 'net.htmlparser.jericho:jericho-html:3.4'
 }

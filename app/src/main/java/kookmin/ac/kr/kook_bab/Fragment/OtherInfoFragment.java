@@ -1,4 +1,4 @@
-package kookmin.ac.kr.kook_bab;
+package kookmin.ac.kr.kook_bab.Fragment;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -10,9 +10,10 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.Toast;
 
-/**
- * Created by 송인엽 on 2016-02-23.
- */
+import kookmin.ac.kr.kook_bab.Activity.GoogleMapActivity;
+import kookmin.ac.kr.kook_bab.R;
+
+
 public class OtherInfoFragment extends Fragment {
 
     public OtherInfoFragment() {

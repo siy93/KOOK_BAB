@@ -1,4 +1,4 @@
-package kookmin.ac.kr.kook_bab;
+package kookmin.ac.kr.kook_bab.Fragment;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -7,6 +7,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+
+import kookmin.ac.kr.kook_bab.Activity.GoogleMapActivity;
+import kookmin.ac.kr.kook_bab.R;
 
 public class OutSchoolFragment extends Fragment {
 

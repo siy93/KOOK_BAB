@@ -1,4 +1,4 @@
-package kookmin.ac.kr.kook_bab;
+package kookmin.ac.kr.kook_bab.Activity;
 
 
 import android.content.Context;
@@ -8,14 +8,17 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 
-import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapFragment;
 import com.google.android.gms.maps.model.*;
 
+import kookmin.ac.kr.kook_bab.R;
+
 public class GoogleMapActivity extends AppCompatActivity {
 
+
+    //Database Setting
     SQLiteDatabase db;
     String dbName = "log.db";
     String tableName = "logListTable";
@@ -25,8 +28,7 @@ public class GoogleMapActivity extends AppCompatActivity {
     private GoogleMap map;
     static final LatLng SEOUL = new LatLng( 37.611141, 126.997289);
 
-    GoogleApiClient googleApiClient;
-
+    //Other variable
     String whattype;
     String getPosition;
     String lon,lat;
@@ -40,15 +42,26 @@ public class GoogleMapActivity extends AppCompatActivity {
         setContentView(R.layout.activity_googlemap);
 
 
-        //구글 맵 관련 메소드
+        //Google Map Open
         MapFragment mapFragment = (MapFragment) getFragmentManager()
                 .findFragmentById(R.id.map);
         map = mapFragment.getMap();
+        map.setMyLocationEnabled(true);
+        map.moveCamera(CameraUpdateFactory.newLatLngZoom(SEOUL, 16));
 
+        //database open
         db = openOrCreateDatabase(dbName, dbMode, null);
         createTable();
 
+        //Intent setting
+        whattype = getIntent().getExtras().getString("type");
+        selectDataAll(whattype);
 
+        getPosition = getIntent().getExtras().getString("p_id");
+        selectData(getPosition);
+
+
+        //Insert Data
         insertData("그림비", 37.610368, 126.993525, "한식", "010");
         insertData("그림비", 37.610368, 126.993525, "한식", "010");
         insertData("송백식당", 37.610385, 126.994300, "한식", "010");
@@ -123,16 +136,9 @@ public class GoogleMapActivity extends AppCompatActivity {
         insertData("신한은행 북악관", 37.612164, 126.996936, "atm", "");
         insertData("공용", 37.610478, 126.994171, "atm", "");
 
-        //현재 위치로 가는 버튼 표시
-        map.moveCamera(CameraUpdateFactory.newLatLngZoom(SEOUL, 16));
-        whattype = getIntent().getExtras().getString("type");
-        selectDataAll(whattype);
-
-        getPosition = getIntent().getExtras().getString("p_id");
-        selectData(getPosition);
-
     }
 
+    //Search Data and show marker
     public void selectData(String what) {
         String sql = "select * from " + tableName + ";";
         Cursor result = db.rawQuery(sql, null);
@@ -161,6 +167,7 @@ public class GoogleMapActivity extends AppCompatActivity {
 
     }
 
+    //Select all data
     public void selectDataAll(String what) {
         String sql = "select * from " + tableName + ";";
         Cursor result = db.rawQuery(sql, null);
@@ -191,6 +198,8 @@ public class GoogleMapActivity extends AppCompatActivity {
         }
         result.close();
     }
+
+    //crete table
     public void createTable(){
         try {
             String sql = "create table " + tableName + "(id integer primary key autoincrement, name TEXT, lon TEXT, lat TEXT, type TEXT, tel TEXT)";
@@ -198,10 +207,10 @@ public class GoogleMapActivity extends AppCompatActivity {
         } catch (android.database.sqlite.SQLiteException e) {
         }
     }
-    //Data 추가
+    //Add data
     public void insertData(String name,Double lon,Double lat,String type,String tel) {
         try {
-            String sql = "INSERT INTO " + tableName + " VALUES (NULL, '" + name + "', '" + lon + "', '" + lat + "', '" + type + "', '" + tel + "'); WHERE NOT EXISTS (SELECT name FROM " + tableName + ")";
+            String sql = "INSERT INTO " + tableName + " VALUES (NULL, '" + name + "', '" + lon + "', '" + lat + "', '" + type + "', '" + tel + "'); SELECT " + name + "WHERE NOT EXISTS (SELECT * FROM " + tableName + "WHERE name = " + name + ")";
             db.execSQL(sql);
         }catch(Exception e){
 
