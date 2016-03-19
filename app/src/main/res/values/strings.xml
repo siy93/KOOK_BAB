@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">KOOK_BAB</string>
+    <string name="app_name">국밥</string>
     <string name="title_activity_splash">SPLASH</string>
     <string name="hello">Hello World, NMapViewer!</string>
     <string name="str_done">완료</string>

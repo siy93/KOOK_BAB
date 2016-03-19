@@ -1,6 +1,7 @@
 package kookmin.ac.kr.kook_bab.Activity;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
@@ -10,10 +11,11 @@ import android.support.v4.view.ViewPager;
 import com.viewpagerindicator.IconPagerAdapter;
 import com.viewpagerindicator.TabPageIndicator;
 
-import kookmin.ac.kr.kook_bab.Fragment.DeliverySchoolFragment;
+import kookmin.ac.kr.kook_bab.Fragment.SearchFragment;
 import kookmin.ac.kr.kook_bab.Fragment.InSchoolFragment;
 import kookmin.ac.kr.kook_bab.Fragment.OtherInfoFragment;
 import kookmin.ac.kr.kook_bab.Fragment.OutSchoolFragment;
+import kookmin.ac.kr.kook_bab.Other.Data;
 import kookmin.ac.kr.kook_bab.R;
 
 
@@ -26,11 +28,17 @@ public class MainActivity extends FragmentActivity {
             R.drawable.places_ic_search,
             R.drawable.perm_group_device_alarms,
     };
+    Intent splash;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        splash = new Intent(this, Data.class);
+        // Splash(로딩화명) 띄우기
+        startActivity(splash);
 
         //Viewpageindicator Setting
         FragmentPagerAdapter adapter = new MyAdapter(getSupportFragmentManager());
@@ -55,7 +63,7 @@ public class MainActivity extends FragmentActivity {
                 return out;
             }
             else if(position == 2){
-                DeliverySchoolFragment del = new DeliverySchoolFragment();
+                SearchFragment del = new SearchFragment();
                 return del;
             }
             else if(position == 3) {

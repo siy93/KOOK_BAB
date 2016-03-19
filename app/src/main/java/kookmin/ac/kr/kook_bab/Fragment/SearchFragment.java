@@ -13,14 +13,14 @@ import kookmin.ac.kr.kook_bab.Activity.SearchShowActivity;
 import kookmin.ac.kr.kook_bab.R;
 
 
-public class DeliverySchoolFragment extends Fragment {
+public class SearchFragment extends Fragment {
     EditText editText;
 
-    public DeliverySchoolFragment() {}
+    public SearchFragment() {}
 
 
     public View onCreateView(LayoutInflater inflater,ViewGroup container,Bundle savedInstanceState){
-        View rootView = inflater.inflate(R.layout.fragment_delivery, container, false);
+        View rootView = inflater.inflate(R.layout.fragment_search, container, false);
 
         final Intent SearchShow = new Intent(getActivity(),SearchShowActivity.class);
         editText = (EditText) rootView.findViewById(R.id.editText);

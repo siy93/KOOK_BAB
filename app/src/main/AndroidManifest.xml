@@ -32,11 +32,6 @@
             android:theme="@style/AppTheme.NoActionBar" >
         </activity>
         <activity
-            android:name=".MenuActivity"
-            android:label="@string/title_activity_splash"
-            android:theme="@style/AppTheme.NoActionBar" >
-        </activity>
-        <activity
             android:name=".Activity.GoogleMapActivity"
             android:label="@string/title_activity_splash"
             android:theme="@style/AppTheme.NoActionBar" >
@@ -44,6 +39,9 @@
         <activity
             android:name=".Activity.SearchShowActivity"
             android:theme="@style/AppTheme.NoActionBar" >
+        </activity>
+        <activity
+            android:name=".Other.Data">
         </activity>
 
         <meta-data

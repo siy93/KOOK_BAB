@@ -26,7 +26,6 @@ public class InSchoolFragment extends Fragment {
         WebView mWebView =(WebView) rootView.findViewById(R.id.webview);
         // 웹뷰에서 자바스크립트실행가능
         mWebView.getSettings().setJavaScriptEnabled(true);
-        // 구글홈페이지 지정
         mWebView.loadUrl(URL_PRIMARY);
         // WebViewClient 지정
 

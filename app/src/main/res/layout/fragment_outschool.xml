@@ -20,21 +20,24 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:text="카페"
-                android:id="@+id/bt_caffe" />
+                android:id="@+id/bt_caffe"
+                android:background="@drawable/out" />
 
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:text="중국집"
-                android:id="@+id/bt_china" />
+                android:id="@+id/bt_china"
+                android:background="@drawable/out"/>
 
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:text="한식"
-                android:id="@+id/bt_korea" />
+                android:id="@+id/bt_korea"
+                android:background="@drawable/out"/>
 
         </LinearLayout>
 
@@ -49,21 +52,24 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:text="양식"
-                android:id="@+id/bt_usa" />
+                android:id="@+id/bt_usa"
+                android:background="@drawable/out"/>
 
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:text="일식"
-                android:id="@+id/bt_japan" />
+                android:id="@+id/bt_japan"
+                android:background="@drawable/out"/>
 
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:text="분식"
-                android:id="@+id/bt_sub" />
+                android:id="@+id/bt_sub"
+                android:background="@drawable/out"/>
 
         </LinearLayout>
 
@@ -78,14 +84,16 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:text="술"
-                android:id="@+id/bt_drink" />
+                android:id="@+id/bt_drink"
+                android:background="@drawable/out"/>
 
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:text="고기"
-                android:id="@+id/bt_meat" />
+                android:id="@+id/bt_meat"
+                android:background="@drawable/out"/>
 
 
             <Button
@@ -93,7 +101,8 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:text="치킨"
-                android:id="@+id/bt_chicken" />
+                android:id="@+id/bt_chicken"
+                android:background="@drawable/out"/>
 
         </LinearLayout>
     </LinearLayout>
